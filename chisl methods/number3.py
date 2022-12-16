@@ -48,7 +48,7 @@ def bubble_max_row(m, col):
         m[col], m[max_row] = m[max_row], m[col]
 
 
-def solve_gauss(m):
+def gauss_mod(m):
     """Solve linear equations system with gaussian method.
     :param m: matrix (list of lists)
     :return: None
@@ -208,6 +208,6 @@ free_b_iter = [
 epsilon = 0.5e-4
 
 print(gauss(matrix_a), end=' - гаусса\n')
-print(solve_gauss(matrix_a), end=' - гаусса с выбором главного элемента\n')
+print(gauss_mod(matrix_a), end=' - гаусса с выбором главного элемента\n')
 print(jacobi(matrix_a_iter, free_b_iter, epsilon),  end=' - якоби\n')
 print(seidel(matrix_a_iter, free_b_iter, epsilon), end=' - гаусса-зейделя\n')
